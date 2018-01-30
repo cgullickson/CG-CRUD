@@ -15,13 +15,15 @@ ActiveRecord::Schema.define(version: 20180130220826) do
 
   create_table "addons", force: :cascade do |t|
     t.string  "name"
-    t.string  "type"
+    t.string  "kind"
     t.integer "snowboard_id"
   end
 
   create_table "snowboards", force: :cascade do |t|
     t.string  "name"
     t.string  "brand"
+    t.string  "price"
+    t.text    "description"
     t.integer "user_id"
   end
 

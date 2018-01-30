@@ -22,7 +22,7 @@ class SnowboardsController < ApplicationController
       erb :'snowboards/new'
     else
       user = User.find(session[:user_id])
-      @snowboard = Snowboard.create(name: params[:name], brand: params[:brand], price: params[:price], user_id: user.id)
+      @snowboard = Snowboard.create(name: params[:name], brand: params[:brand], price: params[:price], description: params[:description], contact: params[:contact], user_id: user.id)
       redirect to "/snowboards/#{@snowboard.id}"
     end
   end
@@ -59,6 +59,8 @@ class SnowboardsController < ApplicationController
       @snowboard.name = params[:name]
       @snowboard.brand = params[:brand]
       @snowboard.price = params[:price]
+      @snowboard.description = params[:description]
+      @snowboard.contact = params[:contact]
       @snowboard.save
       redirect to "/snowboards/#{@snowboard.id}"
     end
