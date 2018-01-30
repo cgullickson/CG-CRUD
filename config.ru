@@ -7,5 +7,5 @@ end
 use Rack::MethodOverride
 use UsersController
 use SnowboardsController
-use GearController
+use AddonsController
 run ApplicationController

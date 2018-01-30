@@ -13,13 +13,13 @@
 
 ActiveRecord::Schema.define(version: 20180130220826) do
 
-  create_table "gear", force: :cascade do |t|
+  create_table "addons", force: :cascade do |t|
     t.string  "name"
     t.string  "type"
-    t.integer "project_id"
+    t.integer "snowboard_id"
   end
 
-  create_table "projects", force: :cascade do |t|
+  create_table "snowboards", force: :cascade do |t|
     t.string  "name"
     t.string  "brand"
     t.integer "user_id"

@@ -1,0 +1,23 @@
+
+<h1><%= @snowboard.brand %></h1>
+<h1><%= @snowboard.name %></h1>
+
+<ul>
+<% @snowboard.addons.each do |addon| %>
+<li><%= "#{addon.name} - $#{addon.type}" %>
+  <span>
+    <form action="/snowboards/<%=@snowboard.id %>/addons/<%=addon.id %>/delete" method="post">
+      <input type="hidden" id="hidden" name="_method" value="delete">
+      <input type="submit" class="btn btn-danger" value="Delete addon">
+    </form>
+  </span>
+</li>
+<% end %>
+</ul>
+<button class="btn btn-default"><a href="/snowboards/<%= @snowboard.id %>/addons/new">Add A New Addon</a></button>
+<button class="btn btn-default"><a href="/snowboards/<%= @snowboard.id %>/edit">Edit Snowboard</a></button>
+
+<form action="/snowboards/<%=@snowboard.id %>/delete" method="post">
+<input type="hidden" id="hidden" name="_method" value="delete">
+<input type="submit" class="btn btn-danger" value="delete snowboard">
+</form>
