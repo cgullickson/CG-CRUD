@@ -7,3 +7,4 @@ class SnowboardsController < ApplicationController
       erb :'users/login'
     end
   end
+end
