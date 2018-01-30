@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20180130220826) do
     t.string  "brand"
     t.string  "price"
     t.text    "description"
+    t.string  "contact"
     t.integer "user_id"
   end
 
