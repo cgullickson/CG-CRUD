@@ -1,10 +1,10 @@
 <h1>Edit Snowboard</h1>
 
-<form action="/projects/<%= @project.id %>" method="POST">
+<form action="/snowboards/<%= @snowboard.id %>" method="POST">
   <input type="hidden" id="hidden" name="_method" value="PATCH">
 
-  <input type="text" class="form-control" name="name" value="<%= @project.name %>">
-  <input type="text" class="form-control" name="brand" value="<%= @project.brand %>">
+  <input type="text" class="form-control" name="name" value="<%= @snowboard.name %>">
+  <input type="text" class="form-control" name="brand" value="<%= @snowboard.brand %>">
 
   <input type="submit" class="btn btn-primary" value="submit" id="submit">
 </form>
