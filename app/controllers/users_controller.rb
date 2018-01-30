@@ -1,4 +1,3 @@
-
 class UsersController < ApplicationController
   get '/signup' do
     if !logged_in?
@@ -42,7 +41,7 @@ class UsersController < ApplicationController
       session.destroy
       redirect to '/'
     else
-      redirect to '/snowboards'
+      redirect to '/'
     end
   end
 

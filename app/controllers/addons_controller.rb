@@ -34,7 +34,7 @@ class AddonsController < ApplicationController
         redirect to "/snowboards/#{@snowboard.id}"
       end
     else
-      erb :'users/login', locals: {message: "You don't have access, please login"}
+      erb :'users/login'
     end
   end
 
