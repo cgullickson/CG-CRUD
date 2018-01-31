@@ -4,10 +4,10 @@
 <h1><%= @snowboard.price %></h1>
 <h1><%= @snowboard.description %></h1>
 <h1><%= @snowboard.contact %></h1>
-
+<h2>Also comes with:</h2>
 <ul>
 <% @snowboard.addons.each do |addon| %>
-<li><%= "#{addon.name} - $#{addon.type}" %>
+<li><%= "#{addon.name} - #{addon.kind}" %>
   <span>
     <form action="/snowboards/<%=@snowboard.id %>/addons/<%=addon.id %>/delete" method="post">
       <input type="hidden" id="hidden" name="_method" value="delete">

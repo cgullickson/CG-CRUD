@@ -4,7 +4,7 @@ class SnowboardsController < ApplicationController
       @snowboards = Snowboard.all
       erb :'snowboards/index'
     else
-      erb :'users/login'
+      erb :'failure'
     end
   end
 
@@ -13,7 +13,7 @@ class SnowboardsController < ApplicationController
     if logged_in?
       erb :'snowboards/new'
     else
-      erb :'users/login'
+      erb :'failure'
     end
   end
 
@@ -32,7 +32,7 @@ class SnowboardsController < ApplicationController
       @snowboard = Snowboard.find(params[:id])
       erb :'snowboards/show'
     else
-      erb :'users/login'
+      erb :'failure'
     end
   end
 
@@ -45,7 +45,7 @@ class SnowboardsController < ApplicationController
       erb :'snowboards'
       end
     else
-      erb :'users/login'
+      erb :'failure'
     end
   end
 
@@ -77,7 +77,7 @@ class SnowboardsController < ApplicationController
         redirect to '/snowboards'
       end
     else
-      redirect to '/login'
+      erb :'failure'
     end
   end
 
