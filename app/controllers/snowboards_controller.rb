@@ -42,7 +42,7 @@ class SnowboardsController < ApplicationController
       if @snowboard.user_id == session[:user_id]
        erb :'snowboards/edit'
       else
-      erb :'snowboards'
+      erb :'failure'
       end
     else
       erb :'failure'
@@ -74,7 +74,7 @@ class SnowboardsController < ApplicationController
         @snowboard.delete
         redirect to '/snowboards'
       else
-        redirect to '/snowboards'
+        erb :'failure'
       end
     else
       erb :'failure'
