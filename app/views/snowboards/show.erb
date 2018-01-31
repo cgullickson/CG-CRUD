@@ -1,10 +1,12 @@
 
-<h1><%= @snowboard.brand %></h1>
-<h1><%= @snowboard.name %></h1>
-<h1><%= @snowboard.price %></h1>
-<h1><%= @snowboard.description %></h1>
-<h1><%= @snowboard.contact %></h1>
-<h2>Also comes with:</h2>
+<h3>Brand:</h3><h1><%= @snowboard.brand %></h1>
+<h3>Model:</h3><h1><%= @snowboard.name %></h1>
+<h3>Price:</h3><h1>$<%= @snowboard.price %></h1>
+<h3>Description:</h3><h1><%= @snowboard.description %></h1>
+<h3>Contact:</h3><h1><%= @snowboard.contact %></h1>
+
+<h3>Also comes with:</h3>
+
 <ul>
 <% @snowboard.addons.each do |addon| %>
 <li><%= "#{addon.name} - #{addon.kind}" %>
