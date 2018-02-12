@@ -52,7 +52,7 @@ class SnowboardsController < ApplicationController
   patch '/snowboards/:id' do
     if params.values.any? {|value| value == ""}
       @snowboard = Snowboard.find(params[:id])
-      erb :'snowboards/edit', locals: {message: "You're missing information"}
+      erb :'snowboards/edit'
       redirect to "/snowboards/#{params[:id]}/edit"
     else
       @snowboard = Snowboard.find(params[:id])

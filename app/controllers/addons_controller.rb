@@ -2,7 +2,11 @@ class AddonsController < ApplicationController
   get '/snowboards/:id/addons/new' do
     if logged_in?
       @snowboard = Snowboard.find(params[:id])
+      if @snowboard.user_id == session[:user_id]
       erb :'addons/new'
+      else
+        erb :'failure'
+      end
     else
       erb :'failure'
     end
